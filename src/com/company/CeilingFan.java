@@ -1,10 +1,13 @@
 package com.company;
 
+import java.util.HashMap;
+
 public class CeilingFan {
     int currentSpeed;
     boolean direction;
     //constant speed list
     final int[] SPEED_LIST= {0,1,2,3};
+
     final int MAX_SPEED = 3;
     //default constructor
     public CeilingFan(){
@@ -62,8 +65,15 @@ public class CeilingFan {
         else{
             d= "CCW";
         }
-        System.out.println("current speed: "+currentSpeed);
-        System.out.println("direction: "+ d);
+        if(currentSpeed ==0){
+            String off = "off";
+            System.out.println("current speed: "+off);
+            System.out.println("direction: "+ d);
+        }
+        else{
+            System.out.println("current speed: "+currentSpeed);
+            System.out.println("direction: "+ d);
+        }
     }
 
 }
